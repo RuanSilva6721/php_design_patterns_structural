@@ -3,8 +3,8 @@ namespace Ruan\DP\Impostos;
 
 use Ruan\DP\Orcamento;
 
-abstract class ImpostoCom2Aliquitas implements Imposto {
-    public function calculaImposto(Orcamento $orcamento): float
+abstract class ImpostoCom2Aliquitas extends Imposto {
+    public function realizaCalculo(Orcamento $orcamento): float
     {
         if($this->aplicarTaxaMaxima($orcamento)){
             return $this->calculaTaxaMaxima($orcamento);
