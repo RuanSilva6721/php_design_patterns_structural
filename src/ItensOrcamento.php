@@ -6,6 +6,7 @@ class ItensOrcamento implements Orcavel{
 
     public function valor():float
     {
+        sleep(2);
         return $this->valor;
     }
 

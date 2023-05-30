@@ -2,6 +2,7 @@
 
 use Ruan\DP\ItensOrcamento;
 use Ruan\DP\Orcamento;
+use Ruan\DP\CacheOrcamentoProxy;
 
 require 'vendor/autoload.php';
 
@@ -22,5 +23,7 @@ $item3->valor = 200;
 $orcamentoAntigo->addItem($item3);
 $orcamento->addItem($orcamentoAntigo);
 
+$proxyCache =  new CacheOrcamentoProxy($orcamento);
 
-echo $orcamento->valor();
+echo $proxyCache->valor() . PHP_EOL;
+echo $proxyCache->valor() . PHP_EOL;
