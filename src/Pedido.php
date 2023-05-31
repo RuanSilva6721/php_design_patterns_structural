@@ -2,8 +2,8 @@
 namespace Ruan\DP;
 
 class Pedido {
-    public $nomeCliente;
-    public $dataFinalizacao;
+
+    public DadosExtrinsicos $dados;
     public $orcamento;
 
     
